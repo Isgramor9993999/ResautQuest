@@ -1,10 +1,12 @@
 import React from 'react'; 
-import io from 'socket.io-client';
-
- const socket = io('http://localhost:9999');
+import JoinBlock from './components/JoinBlock.jsx'
 
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+  <div className="wrapper">
+    <JoinBlock />
+  </div>
+  );
 }
 
 export default App;

@@ -1,0 +1,17 @@
+body {
+}
+
+.wrapper {
+    max-width: 15%;
+    margin: 100px  auto;
+    padding-top: 10px;
+   
+    
+}
+
+.join-block {
+    width: 100px;
+    padding-bottom: 100px;
+    margin: auto;
+    min-width: fit-content;
+}
