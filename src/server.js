@@ -1,19 +1,21 @@
 const express = require('express');
 const useSocket = require('socket.io');
 const app = express();
-
 const server = require('http').Server(app);
+const io = useSocket(server);
 
-
-
-const room = new Map();
+const rooms = new Map();
 
 app.get('/rooms',(req, res)=>{
-    rooms.set('hello', '');
-    res.json(rooms);
+    res.json(rooms)
 });
 
-app.listen(9999, (err) => {
+io.on('connection', (socket) => {
+    
+    console.log('user connected', socket);
+});
+
+server.listen(9999, (err) => {
     if (err) {
         throw Error(err);
     }
